@@ -1,0 +1,213 @@
+	
+	body {
+		
+		background: #0174DF;
+	}
+
+	html {
+
+		margin: 0;
+		padding: 0;
+		
+	}
+
+	.rodape  {
+
+		position: fixed;
+		padding: 1%;
+		background: #ff8e08;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	#telaInicial {
+	    display: flex;
+	}
+
+	#telaInicial .imagem-mao {
+    	width: 65%;
+    	/*margin-top: 25%;*/
+	}
+
+	#telaInicial .imagem-mao img {
+		width: 55%;
+		margin-left: 25%;
+		margin-top: 2%;
+
+	}
+	
+	.bemVindo {
+		margin-top: 10%;
+		font-size: 550%;
+		color: #ff8e08;
+		text-shadow: 3px 3px 3px #ffffff;
+	}
+
+
+	.formularioLogin {
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 8%;
+	}
+
+	.nomeLogin{
+		margin-top: 5%;
+	}
+
+	.login {
+
+		width: 30%;
+	    background: #ffffff;
+	    border-style: solid;
+	    border-color: #0442ff;
+	    border-bottom: 20%;
+	    height: 60%;
+	    margin-left: 3%;
+	    margin-top: 2%;
+	    color: #ff8e08;	   
+	   
+	}
+
+	.texto_login {
+		color: #ff8e08;
+	}
+
+
+	.btn-login {
+		background: #ff8e08;
+		color: #ffffff;
+		width: 50%; 
+	}
+
+	.btn-pesquisa {
+		background: #ff8e08;
+		color: #ffffff;
+		padding: 1.1rem .75rem;
+	    padding-top: 1.1rem;
+	    padding-right: 0.75rem;
+	    padding-bottom: 1.1rem;
+	    padding-left: 0.75rem;
+	}
+
+	.form-control input {
+		border-color: #ff8e08;
+	}
+
+	.logo{
+
+		width: 40%;
+
+		}
+
+	footer {
+		background: #ff8e08;
+	}
+
+	.navbar-toggler {
+		background: #ff8e08;
+	}
+
+
+	.videoCentro {
+		 width: 100%;
+
+	}
+	
+	.videoUnico {
+		position:relative;
+		margin-top: 3%;
+		left: 5%;
+	}
+
+	.descricaoVideo {
+		position:relative;
+		margin-top: 0.5%;
+		left: 5%;
+	}
+
+
+	.informacoesVideoUnico {
+		position:relative;
+		margin-top: 0.2%;
+		left: 5%;
+
+	}
+
+	.listaVideos img {
+		width: 60%;
+	}
+
+	.listaVideos  {
+		position:relative;
+		left: 70%;
+		margin-bottom: 3%;
+		bottom: 434px;	
+	}
+	.quemSomos {
+		margin-top: 1%;
+	}
+
+	.textoEdu {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.equipe {
+		margin-right: 2%;
+		margin-left: 2%;
+		margin-bottom: -20%;
+	}
+
+	.imgEdu {
+		margin-top: 1%;
+	}
+
+	.tituloEquipe {
+		margin-top: 1%;
+		color:  #ff8e08 ;
+	}
+
+	.tabs {
+		background: #FFF;
+
+	}
+
+	.tabs img {
+
+		float: left;
+		margin-right: 2%;
+		margin-left: 2%;
+		margin-bottom: 1%;
+	}
+
+	.tabs input[type='radio'] { 
+    display:none;
+    position:absolute;
+    left:-100px;
+	}
+
+	.tabs label {
+	    width:12%;
+	    text-align:center; 
+	    padding: 1%;
+	    color:#ff8e08; 
+	    display:inline-block;
+	    cursor:pointer;
+	}
+
+	.conteudoEquipe {
+		margin-left: 2%;
+		margin-top: 2.5%;
+	}
+	.tab-content { 
+	    display:none; 
+	    position:absolute;
+	    width:100%;
+	    background-color:#ffffff; 
+	    border-top:6px #FE7B43 solid;
+
+	}
+	#tabs-1 {position:relative}
+	#tabs-1 :checked + label { background-color:#FE7B43; color:#FFF; }
+	#tabs-1 :checked + label + .tab-content { display: block }

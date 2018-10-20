@@ -1,0 +1,65 @@
+<html>
+<head>
+<style type="text/css">
+.tabs input[type='radio'] { 
+    display:none;
+    position:absolute;
+    left:-100px;
+}
+.tabs label {
+    width:60px; 
+    text-align:center; 
+    padding: 20px;
+    color:#666666; 
+    display:inline-block;
+    cursor:pointer;
+}
+.tab-content { 
+    display:none; 
+    position:absolute;
+    left:0;
+    width:100%;
+    background-color:#F3F3F3; 
+    border-top:6px #FE7B43 solid;  
+    text-align:center; 
+    padding:50px 0; 
+}
+#tabs-1 {position:relative}
+#tabs-1 :checked + label { background-color:#FE7B43; color:#FFF; }
+#tabs-1 :checked + label + .tab-content { display: block }
+</style>
+</head>
+<body>
+<div class="tabs" id="tabs-1">
+  <input id="tab-1-1" name="tabs-group-1" type="radio" checked />
+  <label for="tab-1-1">ABA 1</label>
+  <div class="tab-content">
+    CONTEUDO ABA 1
+  </div>
+
+  <input id="tab-1-2" name="tabs-group-1" type="radio" />
+  <label for="tab-1-2">ABA 2</label>
+  <div class="tab-content">
+    CONTEUDO ABA 2
+  </div>
+
+  <input id="tab-1-3" name="tabs-group-1" type="radio" />
+  <label for="tab-1-3">ABA 3</label>
+  <div class="tab-content">
+    CONTEUDO ABA 3
+  </div>
+
+  <input id="tab-1-4" name="tabs-group-1" type="radio" />
+  <label for="tab-1-4">ABA 4</label>
+  <div class="tab-content">
+    CONTEUDO ABA 4
+  </div>
+
+  <input id="tab-1-5" name="tabs-group-1" type="radio" />
+  <label for="tab-1-5">ABA 5</label>
+  <div class="tab-content">
+    CONTEUDO ABA 5
+  </div>
+</div>
+</body>
+</html>
