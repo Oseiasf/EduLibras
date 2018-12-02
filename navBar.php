@@ -1,4 +1,6 @@
-<?php require('funcoes.php');?>
+<?php session_start();
+		require('funcoes.php');
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="index.php">
 		    <img src="images/edulibras.png" width="310" height="50" alt="">
@@ -25,12 +27,12 @@
 		      <?php	    
 				if (isset($_SESSION["email"])) {
 			  ?>
-		    	<li class="nav-item">
+		    	<!-- <li class="nav-item">
 		    		<form class="form-inline my-2 my-lg-0" method="POST" action="buscarPorVideos.php">
 				      <input class="form-control mr-sm-2" type="search" placeholder="O que você procura?" aria-label="Search">
 				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 				    </form>
-		    	</li>
+		    	</li> -->
 		      <li class="nav-item">
 		        <a class="nav-link" href="telaDeVideo.php">Aulas</a>
 		      </li>
@@ -70,6 +72,16 @@
 				    <input type="text" class="form-control" id="exampleInputName" name="nome" aria-describedby="emailHelp" placeholder="Digite seu nome">
 				    <small id="nameHelp" class="form-text text-muted" ></small>
 				  </div>
+				   <div class="form-group">
+				    <label for="exampleInputEmail1">CPF</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" name="cpf" aria-describedby="emailHelp" placeholder="Digite seu cpf">
+				    <small id="emailHelp" class="form-text text-muted" >000.000.000-00</small>
+				  </div>
+				   <div class="form-group">
+				    <label for="exampleInputEmail1">Data de Nascimento</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" name="dataNasc" aria-describedby="emailHelp" placeholder="Digite sua data de nascimento">
+				    <small id="emailHelp" class="form-text text-muted" >00/00/00</small>
+				  </div>
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Email</label>
 				    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
@@ -84,7 +96,7 @@
 				    <label for="exampleInputPassword1">Confirmar senha</label>
 				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite novamente a senha">
 				  </div>
-				  <div class="form-group">
+				 <!--  <div class="form-group">
 				    <label for="exampleSelect1">Qual seu nível em LIBRAS?</label>
 				    <select class="form-control" id="exampleSelect1" name="tipoUsuario">
 				      
@@ -93,7 +105,7 @@
 				      <option value="3">Básico</option>
 				      
 				    </select>
-				  </div>
+				  </div> -->
 				  <!-- <div class="form-check">
 				    <label class="form-check-label">
 				      <input type="checkbox" class="form-check-input">
@@ -125,25 +137,29 @@
 		      <div class="modal-body">
 		        <form method="POST" action="alterarUsuario.php">
 				  <div class="form-group">
+				  	<input type="hidden" name="idUsuario" value="<?=$resultado['id_aluno'];?>" >
 				    <label for="exampleInputName">Nome Completo</label>
-				    <input type="text" class="form-control" id="nome" name="nome" aria-describedby="emailHelp" value="<?=$resultado['nome_completo'];?>">
+				    <input type="text" class="form-control" id="name" name="nome" aria-describedby="nameHelp" value="<?=$resultado['nome_completo'];?>">
 				    <small id="nameHelp" class="form-text text-muted" ></small>
 				  </div>
 				  <div class="form-group">
+				    <label for="exampleInputCpf" id="cpf">CPF</label>
+				    <input type="text" class="form-control" id="exampleInputCpf" name="cpf" aria-describedby="cpfHelp" value="<?=$resultado['cpf'];?>">
+				    <small id="cpfHelp" class="form-text text-muted" >000.000.000-00</small>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="exampleInputDate" id="email">Data de Nascimento</label>
+				    <input type="text" class="form-control" id="exampleInputDate" name="dataNasc" aria-describedby="dateHelp" value="<?=$dataParaExibir;?>">
+				    <small id="dateHelp" class="form-text text-muted" >00/00/0000</small>
+				  </div>
+
+				   <div class="form-group">
 				    <label for="exampleInputEmail1" id="email">Email</label>
 				    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?=$resultado['email'];?>">
 				    <small id="emailHelp" class="form-text text-muted" >exemplo@exemplo.com</small>
 				  </div>
-				  <div class="form-group">
-				    <label for="exampleSelect1">Qual seu nível em LIBRAS?</label>
-				    <select class="form-control" id="exampleSelect1" name="tipoUsuario">
-				      
-				      <option value="1">Avançado</option>
-				      <option value="2">Intermediário</option>
-				      <option value="3">Básico</option>
-				      
-				    </select>
-				  </div>
+				
 				  <div class="form-group">
 				    <label><a href="alterarSenha.php">Alterar senha</a></label>
 				  </div>
@@ -176,7 +192,15 @@
         <form action="recebeSugestoes.php" method="POST">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="text" class="form-control" id="recipient-name" name="email">
+            <?php
+            	if (isset($_SESSION["email"])) {
+			?>
+            <input type="text" class="form-control" id="recipient-name" name="email" value="<?=$resultado['email'];?>" disabled>
+            <?php } else { ?>
+             <input type="text" class="form-control" id="recipient-name" name="email">
+            <?php 
+        		}
+            ?>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Mensagem:</label>

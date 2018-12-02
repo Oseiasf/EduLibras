@@ -25,7 +25,7 @@
 		<div class="quemSomos">
 			<div><?php require('equipe.html');?></div>
 		</div>
-		<div class="rodape">
+		<div class="rodape-diferente">
 			<?php require('footer.html');?>
 		</div>
 	</body>

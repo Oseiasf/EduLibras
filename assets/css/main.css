@@ -13,12 +13,23 @@
 
 	.rodape  {
 
+		position: relative;
+		padding: 1%;
+		background: #ff8e08;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.rodape-diferente {
+
 		position: fixed;
 		padding: 1%;
 		background: #ff8e08;
 		bottom: 0;
 		left: 0;
 		width: 100%;
+
 	}
 
 	#telaInicial {
@@ -31,15 +42,16 @@
 	}
 
 	#telaInicial .imagem-mao img {
-		width: 55%;
-		margin-left: 25%;
-		margin-top: 2%;
+		width: 100%;
+		height: 75%;
+		margin-left: 5%;
+		margin-top: 10%;
 
 	}
 	
 	.bemVindo {
 		margin-top: 10%;
-		font-size: 550%;
+		font-size: 400%;
 		color: #ff8e08;
 		text-shadow: 3px 3px 3px #ffffff;
 	}
@@ -48,7 +60,7 @@
 	.formularioLogin {
 		margin-left: 5%;
 		margin-right: 5%;
-		margin-top: 8%;
+		margin-top: 10%;
 	}
 
 	.nomeLogin{
@@ -108,6 +120,25 @@
 		background: #ff8e08;
 	}
 
+	.AlterarSenha {
+		background: #ffffff;
+		margin-top: 5%;
+		width: 50%;
+		margin-left: 25%;
+
+	}
+
+	#alterarSenhaAntiga {
+		width: 60%;
+	}
+
+	#alterarSenhaAtual {
+		width: 60%;
+	}
+
+	.texto {
+		color: #ff8e08;
+	}
 
 	.videoCentro {
 		 width: 100%;

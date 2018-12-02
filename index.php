@@ -27,7 +27,7 @@ require ('funcoes.php');
 					    if (isset($_SESSION["email"])) {
 					    	$_SESSION["nome"] = $nome;
 					?>
-					<center><h1 class="bemVindo">Bem vindo, <?= $resultado['nome_completo'];?>.</h1></center>
+					<center><h3 class="bemVindo">Bem vindo, <?= $resultado['nome_completo'];?>.</h3></center>
 				<?php } else {
 
 				?>
@@ -58,9 +58,20 @@ require ('funcoes.php');
 			</div>
 		
 		</div>
-		
+		<?php 
+
+			if (isset($_SESSION["email"])) {
+
+		?>
+		<div class="rodape-diferente">
+			<?php require('footer.html');?>	
+		</div>
+		<?php 
+	} else {
+		?>
 		<div class="rodape">
 			<?php require('footer.html');?>	
 		</div>
+		<?php  }?>
 	</body>
 </html>

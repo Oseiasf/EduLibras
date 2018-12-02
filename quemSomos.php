@@ -24,21 +24,14 @@
 		</div>
 		<div class="quemSomos">
 			<div class="textoEdu">
-				 <h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus bibendum aliquet erat, ut ornare purus malesuada et.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus bibendum aliquet erat, ut ornare purus malesuada et.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus bibendum aliquet erat, ut ornare purus malesuada et.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus bibendum aliquet erat, ut ornare purus malesuada et.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus bibendum aliquet erat, ut ornare purus malesuada et.
-				Nós somos EDULibras! Inovação, conhecimento e igualdade, 
-					tudo isso a um clique de distância.</h4></p>
+				 <h4><p>A EDULibras é um startup que tem como objetivo trazer maior qualidade na educação
+				 	dos milhares de jovens estudantes surdos, desenvolvendo uma plataforma online, totalmente
+				 	acessível, pensada especificamente para o estudante surdo, onde todo conteúdo encontrado
+				 	na plataforma será contruído por profissionais especializados, ou seja,
+				 	contruído inteiramente em Libras!</h4></p>
 			</div>
 		</div>
-		<div class="rodape">
+		<div class="rodape-diferente">
 			<?php require('footer.html');?>	
 		</div>
 	</body>

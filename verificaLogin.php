@@ -5,7 +5,7 @@
 
   try{
 	require('conexao.php');
-	$stmt =$conexao->prepare("select nome_completo,email, senha from usuario where email = ? ");
+	$stmt =$conexao->prepare("select nome_completo,email, senha from Aluno where email = ? ");
 	$stmt->bindParam(1, $login);
 	$stmt->execute();	
 	$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -15,6 +15,7 @@
 		if(password_verify($senha, $linha["senha"])){
 			
 			session_start();
+			$_SESSION["id"]=$id;
 			$_SESSION["login"]=$login;
 			$_SESSION["email"]=$linha["email"];
 			$linha["nome_completo"] = $_SESSION["nome"];

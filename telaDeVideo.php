@@ -24,20 +24,20 @@
 			}
 		</script>
 	</head>
-	<body class="telaVideos bg-white">
+	<body class="telaVideos">
 		<?php include('navBar.php');?>
 			<div class="videoCentro">
 				<div>
-					<div class="videoUnico " style="width: 30rem; height: 20rem;">
+					<div class="videoUnico">
 						<div class="card" style="width: 30rem; height: 20rem;">
-							<img style="width: 30rem; height: 20rem;" class="card-img-top" src="images/bem-vindo.gif" alt="Card image cap">
+							<iframe width="478" height="450" src="https://www.youtube.com/embed/srM2XHzu0g8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="card-body">
 								<p class="card-text"></p>
 							</div>
 						</div>			
 					</div>
 					<div>
-						<h1 class="descricaoVideo">Aula 1</h1>
+						<h1 class="descricaoVideo">Aula sobre os meses do ano</h1>
 					</div>
 					<div class="informacoesVideoUnico" style="width: 30rem;">
 						<p>
@@ -50,13 +50,13 @@
 						  <div class="modal-dialog" role="document">
 						    <div class="modal-content">
 						      <div class="modal-header">
-						        <h5 class="modal-title" id="exampleModalLabel">Aula 1</h5>
+						        <h5 class="modal-title" id="exampleModalLabel">Aula sobre os meses do ano</h5>
 						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						          <span aria-hidden="true">&times;</span>
 						        </button>
 						      </div>
 						      <div class="modal-body">
-						        Informações do video
+						        Aprenda os sinais dos meses do ano. É simples e fácil.
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

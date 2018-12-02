@@ -7,7 +7,7 @@
 			$email = $_POST["email"];
 			$descricao = $_POST["descricao"];
 
-			$stmt = $conexao->prepare("insert into sugestao (email, descricao) values ('$email', '$descricao')");
+			$stmt = $conexao->prepare("insert into Fale_conosco (email, descricao) values ('$email', '$descricao')");
 			
 				
 				$stmt->bindValue(1, $email);
