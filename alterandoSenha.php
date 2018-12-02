@@ -40,7 +40,7 @@ session_start();
 					}else{
 						
 						$senhaIncorreta = "A senha antiga está incorreta!";
-						$_SESSION["invalido"] = $senhaInorreta;
+						$_SESSION["invalido"] = $senhaIncorreta;
 						header("Location: alterarSenha.php");
 						
 					}
